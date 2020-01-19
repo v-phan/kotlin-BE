@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-class RestAPIsController {
-    @RequestMapping("/home")
+class Homecontroller {
+    @RequestMapping("/")
     fun findAll(): String {
-        return "Hello World!"
+        return "Welcome to the page!"
     }
 }
