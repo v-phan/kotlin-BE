@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 
 @Entity
-class PersonUser (
+class Person (
         val userName: String,
         var items: ArrayList<Int>,
         @Id @GeneratedValue(strategy = GenerationType.AUTO) val userId: Int = 0
