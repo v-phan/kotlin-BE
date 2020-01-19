@@ -8,12 +8,12 @@ import no.boapi.test.repositories.UserRepository
 import no.boapi.test.models.PersonUser
 
 @RestController
-class UserController {
+class PersonController {
 
     @Autowired
     lateinit var repository: UserRepository
 
-    @RequestMapping("/savepersons")
+    @RequestMapping("/persons/save")
     fun save(): String {
         repository.save(PersonUser("Jack", arrayListOf()))
         repository.save(PersonUser("Adam",arrayListOf()))

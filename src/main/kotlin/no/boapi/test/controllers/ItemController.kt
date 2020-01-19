@@ -32,15 +32,9 @@ class ItemController {
         return "Person does not exist"
     }
 
-    //url param
-    @PostMapping("/random")
-    fun urlparam(@RequestParam(value = "name") name: String, @RequestParam(value = "category") category: String) : String{
-        return name + category
-    }
-
-    @GetMapping("/items/{id}")
-    fun findById(@PathVariable id: Int) : MutableList<Item> {
-        var person = users.findByUserId(id)
+    @GetMapping("/items/{userId}")
+    fun findById(@PathVariable userId: Int) : MutableList<Item> {
+        var person = users.findByUserId(userId)
         var liste = person?.items
         var returnliste = mutableListOf<Item>()
         if (liste != null) {
