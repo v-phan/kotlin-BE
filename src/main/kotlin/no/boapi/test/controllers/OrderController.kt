@@ -1,11 +1,7 @@
 package no.boapi.test.controllers
 
-import org.apache.http.HttpHeaders
-import org.apache.http.client.HttpClient
 import org.apache.http.client.methods.CloseableHttpResponse
 import org.apache.http.client.methods.HttpPost
-import org.apache.http.client.methods.HttpUriRequest
-import org.apache.http.client.methods.RequestBuilder
 import org.apache.http.impl.client.CloseableHttpClient
 import org.apache.http.impl.client.HttpClients
 import org.springframework.web.bind.annotation.PostMapping
