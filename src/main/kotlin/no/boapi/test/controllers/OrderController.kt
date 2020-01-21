@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class OrderController {
 
-    @GetMapping("/token")
+    @PostMapping("/token")
     fun purchase(): String{
         var client: CloseableHttpClient  = HttpClients.createDefault();
-        var httpPost: HttpPost = HttpPost("http://www.example.com");
+        var httpPost: HttpPost = HttpPost("https://apitest.vipps.no");
 
         httpPost.setHeader("client_id", "c0lLeUtJUTI4b01kRnptYWhOQXE=");
         httpPost.setHeader("client_secret", "4fe4cd4f-7998-498c-be17-056a8d9efd58");
