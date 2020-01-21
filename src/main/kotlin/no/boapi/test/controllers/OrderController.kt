@@ -22,8 +22,10 @@ class OrderController {
         httpPost.setHeader("Ocp-Apim-Subscription-Key", "982b85d191fb48ff9c655cfbc4e162c4");
 
         var response: CloseableHttpResponse = client.execute(httpPost);
+
+
         client.close();
         println(response)
-        return "Ok"
+        return response.toString()
     }
 }
