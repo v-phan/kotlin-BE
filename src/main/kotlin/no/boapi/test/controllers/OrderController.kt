@@ -7,6 +7,7 @@ import org.apache.http.impl.client.HttpClients
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RestController
+import org.apache.http.util.EntityUtils;
 
 
 @RestController
@@ -25,7 +26,6 @@ class OrderController {
 
 
         client.close();
-        println(response)
-        return response.toString()
+        return response.getStatusLine().toString();
     }
 }
