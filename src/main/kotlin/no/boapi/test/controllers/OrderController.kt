@@ -4,6 +4,7 @@ import org.apache.http.client.methods.CloseableHttpResponse
 import org.apache.http.client.methods.HttpPost
 import org.apache.http.impl.client.CloseableHttpClient
 import org.apache.http.impl.client.HttpClients
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class OrderController {
 
-    @PostMapping("/token")
+    @GetMapping("/token")
     fun purchase(): String{
         var client: CloseableHttpClient  = HttpClients.createDefault();
         var httpPost: HttpPost = HttpPost("http://www.example.com");
