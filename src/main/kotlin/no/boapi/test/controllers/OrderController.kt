@@ -13,7 +13,7 @@ import org.apache.http.util.EntityUtils;
 @RestController
 class OrderController {
 
-    @GetMapping("/token")
+    @PostMapping("/token")
     fun purchase(): String{
         var client = HttpClients.createDefault();
         var postrequest = HttpPost("https://apitest.vipps.no");
