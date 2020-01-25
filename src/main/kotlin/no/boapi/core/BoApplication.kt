@@ -1,4 +1,4 @@
-package no.boapi.test
+package no.boapi.core
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

@@ -1,6 +1,6 @@
-package no.boapi.test.repositories
+package no.boapi.core.repositories
 
-import no.boapi.test.models.Person
+import no.boapi.core.entities.Person
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 

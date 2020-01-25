@@ -1,4 +1,4 @@
-package no.boapi.test.controllers
+package no.boapi.core.controllers
 
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController

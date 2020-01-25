@@ -1,4 +1,4 @@
-package no.boapi.test.models
+package no.boapi.core.entities
 
 import javax.persistence.Entity
 import javax.persistence.Id

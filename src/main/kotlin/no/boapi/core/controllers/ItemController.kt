@@ -1,12 +1,11 @@
-package no.boapi.test.controllers
+package no.boapi.core.controllers
 
 import org.springframework.beans.factory.annotation.Autowired
 
-import no.boapi.test.models.Item
-import no.boapi.test.repositories.ItemRepository
-import no.boapi.test.repositories.UserRepository
+import no.boapi.core.entities.Item
+import no.boapi.core.repositories.ItemRepository
+import no.boapi.core.repositories.UserRepository
 import org.springframework.web.bind.annotation.*
-import java.util.*
 
 
 @RestController
