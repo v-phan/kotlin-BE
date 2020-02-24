@@ -11,20 +11,13 @@ import org.springframework.security.authentication.BadCredentialsException
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
+import org.springframework.stereotype.Component
 import org.springframework.web.bind.annotation.*
 import java.lang.reflect.Method
 
+@Component
 @RestController
-class AuthenticationController{
-
-    @Autowired
-    private lateinit var authenticationManager: AuthenticationManager
-
-    @Autowired
-    private lateinit var userDetailsService : MyUserDetailsService
-
-    @Autowired
-    private lateinit var jwtTokenUtil: JWTUtil
+class AuthenticationController(private val authenticationManager: AuthenticationManager, private val userDetailsService: MyUserDetailsService, private val jwtTokenUtil: JWTUtil){
 
     @RequestMapping("/test")
     fun hello() : String = "Hei verden"

@@ -20,16 +20,13 @@ import org.springframework.stereotype.Component
 
 @Component
 @EnableWebSecurity
-class SecurityConfigurer : WebSecurityConfigurerAdapter() {
+class SecurityConfigurer(private val myUserDetailsService: MyUserDetailsService, private val jwtRequestFilter: JwtRequestFilter) : WebSecurityConfigurerAdapter() {
 
     @Bean
     override fun authenticationManagerBean(): AuthenticationManager = super.authenticationManagerBean()
 
-    @Autowired
-    private lateinit var myUserDetailsService: MyUserDetailsService
-
-    @Autowired
-    private lateinit var jwtRequestFilter: JwtRequestFilter
+    @Bean
+    fun passwordEncoder(): PasswordEncoder = NoOpPasswordEncoder.getInstance()
 
     @Throws(Exception::class)
     override fun configure(auth: AuthenticationManagerBuilder){
@@ -50,10 +47,6 @@ class SecurityConfigurer : WebSecurityConfigurerAdapter() {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter::class.java)
     }
-
-
-    @Bean
-    fun passwordEncoder(): PasswordEncoder = NoOpPasswordEncoder.getInstance()
 
     @Autowired
     @Throws(Exception::class)

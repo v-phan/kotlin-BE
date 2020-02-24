@@ -21,11 +21,6 @@ import javax.servlet.http.HttpServletResponse
 @Component
 class JwtRequestFilter(private val jwtUtil: JWTUtil, private val myUserDetailsService: MyUserDetailsService) : OncePerRequestFilter() {
 
-//    @Autowired
-//    private lateinit var jwtUtil: JWTUtil
-//    @Autowired
-//    private lateinit var myUserDetailsService: MyUserDetailsService
-//
     @Throws(ServletException::class, IOException::class)
     override fun doFilterInternal(httpServletRequest: HttpServletRequest, httpServletResponse: HttpServletResponse, filterChain: FilterChain) {
         val authorizationHeader:String? = httpServletRequest.getHeader("Authorization")
