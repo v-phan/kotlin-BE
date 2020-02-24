@@ -1,4 +1,4 @@
-package no.boapi.core
+package no.knips
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
