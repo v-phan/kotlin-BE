@@ -10,5 +10,6 @@ class Ordre (
         val restaurantID: Int,
         val tRegistered: String,
         var tFinished: String,
+        var foodOrder: String,
         @Id @GeneratedValue(strategy = GenerationType.AUTO) val ordreId: Int = 0
 )
