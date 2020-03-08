@@ -1,14 +1,11 @@
 package no.knips.controllers
 
 import no.knips.repositories.AccountRepository
-import org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration
-import org.springframework.boot.json.GsonJsonParser
 import org.springframework.stereotype.Component
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import com.google.gson.Gson
 import no.knips.entities.Account
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import org.springframework.web.bind.annotation.RequestBody
 
