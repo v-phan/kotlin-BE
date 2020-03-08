@@ -12,9 +12,6 @@
 	<artifactId>admin_backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<compilerPlugins>
-			<plugin>jpa</plugin>
-		</compilerPlugins>
 		<java.version>1.8</java.version>
 		<kotlin.version>1.3.61</kotlin.version>
 	</properties>

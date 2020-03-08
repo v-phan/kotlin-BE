@@ -21,12 +21,12 @@ class OrdreController(private val ordreRepository: OrdreRepository, private val 
 
     @GetMapping("/tester")
     fun getmappingtest(){
-        var ordre1 = Ordre(1,"Ram","ld");
-        var ordre2 = Ordre(2,"Ram","lokd");
-        var ordre3 = Ordre(2,"Ram","lokd");
-
-        ordreRepository.save(ordre1);
-        ordreRepository.save(ordre2);
-        ordreRepository.save(ordre3);
+//        var ordre1 = Ordre(1,"Ram","ld","Basj");
+//        var ordre2 = Ordre(2,"Ram","lokd");
+//        var ordre3 = Ordre(2,"Ram","lokd");
+//
+//        ordreRepository.save(ordre1);
+//        ordreRepository.save(ordre2);
+//        ordreRepository.save(ordre3);
     }
 }
