@@ -12,9 +12,7 @@ class AdminController{
     fun allOrders(): String = "Hei"
 
     @PostMapping("/orders/{orderID}/finished")
-    fun finishOrder(){
-
-    }
+    fun finishOrder(){}
 
     @GetMapping("/orders/live")
     fun liveOrders(){}

@@ -11,7 +11,4 @@ class Ordre (
         val tRegistered: String,
         var tFinished: String,
         @Id @GeneratedValue(strategy = GenerationType.AUTO) val ordreId: Int = 0
-){
-
-
-}
+)

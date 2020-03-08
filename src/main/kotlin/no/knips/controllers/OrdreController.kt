@@ -24,10 +24,10 @@ class OrdreController {
     }
     @GetMapping("/tester")
     fun getmappingtest(){
-        var user = Account ("niraj.sonawane@gmail.com", "$2a$10yRxRYK/s8vZCp.bgmZsD/uXmHjekuPU/duM0iPZw04ddt1ID9H7kK", "User");
-        var test = Account	("test@gmail.com", "$2a$10YWDqYU0XJwwBogVycbfPFOnzU7vsG/XvAyQlrN34G/oA1SbhRW.W.", "User");
-        accountRepository.save(user);
-        accountRepository.save(test);
+//        var user = Account ("niraj.sonawane@gmail.com", "$2a$10yRxRYK/s8vZCp.bgmZsD/uXmHjekuPU/duM0iPZw04ddt1ID9H7kK", "User");
+//        var test = Account	("test@gmail.com", "$2a$10YWDqYU0XJwwBogVycbfPFOnzU7vsG/XvAyQlrN34G/oA1SbhRW.W.", "User");
+//        accountRepository.save(user);
+//        accountRepository.save(test);
 
 
         var ordre1 = Ordre(1,"Ram","ld");
