@@ -14,11 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody
 class AccountController(private val accountRepository: AccountRepository, private val passwordEncoder: BCryptPasswordEncoder){
 
     var gson = Gson()
-    @RequestMapping("/test")
-    fun hello() : String {
-        return gson.toJson(accountRepository.findAll())
-    }
-
 
     @RequestMapping("/signup")
     fun createAccount(@RequestBody account : Account) : String{

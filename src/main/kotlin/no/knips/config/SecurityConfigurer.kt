@@ -42,7 +42,7 @@ class SecurityConfigurer(private val myUserDetailsService: MyUserDetailsService,
         http.csrf()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/authenticate","/signup","/test")
+                .antMatchers("/authenticate","/signup","/")
                 .permitAll()
                 .anyRequest()
                 .authenticated()

@@ -20,7 +20,6 @@ open class MyUserDetailsService (private val accountRepository: AccountRepositor
             var account = accountRepository.findByUsername(username)
             if(account == null){
                 throw UsernameNotFoundException("not found")
-
             }
             return User(account.getUsername(),account.getPassword(), mutableListOf() )
     }
